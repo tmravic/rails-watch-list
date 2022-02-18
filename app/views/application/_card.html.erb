@@ -2,6 +2,6 @@
 <div class="card-category m-2" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : image_path('/images/netflix_and_chill.jpg') %>)">
   <div>
     <h1><%= list.name %></h1>
-    <%= link_to "View list", list_path(list), class: "btn btn-success" %>
+    <%= link_to "View list", list_path(list), class: "btn btn-outline-success" %>
   </div>
 </div>

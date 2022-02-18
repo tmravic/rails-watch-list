@@ -1,0 +1,14 @@
+
+<% if @list.errors.any? %>
+  <% @restaurant.errors.full_messages.each do |msg| %>
+  <p><%= msg %></p>
+  <% end %>
+<% end %>
+<div class="container">
+  <div class="row">
+  <h1>Create a new movie watchlist</h1>
+    <div class="col-6 d-flex justify-content-center">
+      <%= render 'form' %>
+    </div>
+  </div>
+</div>

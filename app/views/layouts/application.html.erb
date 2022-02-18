@@ -11,6 +11,20 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="page-frame-content">
+      <div class="page-frame-header">
+      </div>
+      <div class="page-frame-body">
+        <div class="container">
+          <div class="row">
+            <div class="col-6 justify-content-center text-light">
+              <%= yield %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page-frame-footer">
+      </div>
+    </div>
   </body>
 </html>

@@ -1,16 +1,21 @@
-
-<%= @list.name %>
-<h1>Movies on this list</h1>
-<hr>
-
-<% @list.bookmarks.each do |bookmark| %>
-  <h3>Name: <%= bookmark.movie.title %></h3>
-  <h3>Rating: <%= bookmark.movie.rating %></h3>
-  <h4>Comments: <%= bookmark.comment %></h4>
-  <p><%= link_to 'Delete comment', bookmark_path(bookmark), method: :delete, data: { confirm: 'Are you sure?' } %></p>
-<% end %>
-<hr>
-<h1>Add a new review</h1>
-<div class="col-6 d-flex justify-content-center">
-  <%= render 'movies_form' %>
+<h1><%= @list.name %></h1>
+<%= link_to "Back home", lists_path, class: "btn btn-success my-3" %>
+<div class="row">
+  <div class="col">
+    <h3>Movies on this list</h3>
+    <hr>
+    <% @list.bookmarks.each do |bookmark| %>
+      <p>Name: <%= bookmark.movie.title %></p>
+      <p>Rating: <%= bookmark.movie.rating %></p>
+      <p>Comments: <%= bookmark.comment %></p>
+      <p><%= link_to 'Delete comment', bookmark_path(bookmark), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    <% end %>
+  </div>
+  <div class="col">
+    <h1>Add a new review</h1>
+    <div class="col-6 d-flex justify-content-center">
+      <%= render 'movies_form' %>
+    </div>
+  </div>
 </div>
+<hr>

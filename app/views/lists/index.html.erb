@@ -1,10 +1,7 @@
 <h1>Movie WatchList Builder</h1>
 <%= link_to 'New Watch List', new_list_path, class: 'btn btn-success my-3' %>
-<div class="d-flex justify-content-start">
+<div class="d-flex flex-wrap">
   <% @lists.each do |list| %>
     <%= render 'card', list: list %>
   <% end %>
 </div>
-
-<%= cl_image_tag("midfwfzkslsj5znucfo1", width: 400, height: 300, crop: :fill) %>
-<%= cl_image_tag("xftc0cblo7dx0kpsp69i", width: 150, height: 150, crop: :thumb, gravity: :face) %>

@@ -1,19 +1,21 @@
 <h1><%= @list.name %></h1>
 <%= link_to "Back home", lists_path, class: "btn btn-success my-3" %>
-<div class="row">
-  <div class="col">
+<div class="row justify-content-between">
+  <div class="col" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5))">
     <h3>Movies on this list</h3>
     <hr>
-    <% @list.bookmarks.each do |bookmark| %>
-      <p>Name: <%= bookmark.movie.title %></p>
-      <p>Rating: <%= bookmark.movie.rating %></p>
-      <p>Comments: <%= bookmark.comment %></p>
-      <p><%= link_to 'Delete comment', bookmark_path(bookmark), method: :delete, data: { confirm: 'Are you sure?' } %></p>
-    <% end %>
+    <div class="row">
+      <% @list.bookmarks.each do |bookmark| %>
+        <p>Name: <%= bookmark.movie.title %></p>
+        <p>Rating: <%= bookmark.movie.rating %></p>
+        <p>Comments: <%= bookmark.comment %></p>
+        <p><%= link_to 'Delete comment', bookmark_path(bookmark), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+      <% end %>
+    </div>
   </div>
   <div class="col">
     <h1>Add a new review</h1>
-    <div class="col-6 d-flex justify-content-center">
+    <div class="col-6">
       <%= render 'movies_form' %>
     </div>
   </div>

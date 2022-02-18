@@ -2,16 +2,15 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  background: asset_url("Netflix.png");
+  justify-content: space-around;
+  background: asset_url("krists-luhaers-AtPWnYNDJnM-unsplash.jpg");
   background-size: center;
 
   h1 {
-    font-size: 3em;
+    font-size: 2em;
     color: #FFFFFF;
-    margin-top: 5%;
+    // margin-top: 5%;
   }
-
 }
 
 .page-frame-header {
